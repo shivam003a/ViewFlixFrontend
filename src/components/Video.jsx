@@ -33,7 +33,8 @@ const Video = () => {
             method: "PUT",
             headers: {
                 "Content-Type": "application/json"
-            }
+            },
+            credentials: "include"
         })
         const data = await res.json()
         dispatch(setVideoInfo(data.data))
@@ -44,7 +45,8 @@ const Video = () => {
             method: "PUT",
             headers: {
                 "Content-Type": "application/json"
-            }
+            },
+            credentials: "include"
         })
         const data = await res.json()
         dispatch(setVideoInfo(data.data))
@@ -55,7 +57,8 @@ const Video = () => {
             method: "PUT",
             headers: {
                 "Content-Type": "application/json"
-            }
+            },
+            credentials: "include"
         })
         const data = await res.json()
         dispatch(setUser(data.data))
@@ -66,7 +69,8 @@ const Video = () => {
             method: "PUT",
             headers: {
                 "Content-Type": "application/json"
-            }
+            },
+            credentials: "include"
         })
         const data = await res.json()
         dispatch(setUser(data.data))
@@ -83,7 +87,8 @@ const Video = () => {
                 body: JSON.stringify({
                     desc: comment,
                     videoId: id
-                })
+                }),
+                credentials: "include"
             })
         ])
         const [commentData] = await Promise.all([
@@ -100,13 +105,26 @@ const Video = () => {
         const fetchData = async () => {
             dispatch(startLoading())
             const [videoRes, relatedVideoRes, viewsRes] = await Promise.all([
-                fetch(`${process.env.REACT_APP_BASE_URL}/api/video/find/${id}`),
-                fetch(`${process.env.REACT_APP_BASE_URL}/api/video/random`),
+                fetch(`${process.env.REACT_APP_BASE_URL}/api/video/find/${id}`, {
+                    method: "GET",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    credentials: "include"
+                }),
+                fetch(`${process.env.REACT_APP_BASE_URL}/api/video/random`, {
+                    method: "GET",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    credentials: "include"
+                }),
                 fetch(`${process.env.REACT_APP_BASE_URL}/api/video/views/${id}`, {
                     method: "PUT",
                     headers: {
                         "Content-Type": "application/json"
-                    }
+                    },
+                    credentials: "include"
                 }),
             ])
 
@@ -120,7 +138,13 @@ const Video = () => {
             dispatch(setRelatedVideo(relatedVideoData.data));
 
             if (videoData.data.userId) {
-                const userRes = await fetch(`${process.env.REACT_APP_BASE_URL}/api/user/find/${videoData.data.userId}`)
+                const userRes = await fetch(`${process.env.REACT_APP_BASE_URL}/api/user/find/${videoData.data.userId}`, {
+                    method: "GET",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    credentials: "include"
+                })
                 const userData = await userRes.json()
                 dispatch(setUserInfo(userData.data))
             }
@@ -132,7 +156,13 @@ const Video = () => {
     useEffect(() => {
         const fetchComment = async () => {
             const [commentRes] = await Promise.all([
-                fetch(`${process.env.REACT_APP_BASE_URL}/api/comment/find/${id}`)
+                fetch(`${process.env.REACT_APP_BASE_URL}/api/comment/find/${id}`, {
+                    method: "GET",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    credentials: "include"
+                })
             ])
 
             const [commentData] = await Promise.all([

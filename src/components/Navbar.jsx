@@ -27,7 +27,8 @@ const Navbar = () => {
             method: "GET",
             headers: {
                 "Content-Type": "application/json"
-            }
+            },
+            credentials: "include"
         })
         const data = await res.json()
         if (res.status === 200) {
@@ -45,7 +46,11 @@ const Navbar = () => {
         const getUser = async () => {
             dispatch(startLoading())
             const res = await fetch(`${process.env.REACT_APP_BASE_URL}/api/user/me`, {
-                method: "GET"
+                method: "GET",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                credentials: "include"
             })
             const data = await res.json()
 

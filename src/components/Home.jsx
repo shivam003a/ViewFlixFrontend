@@ -26,7 +26,8 @@ const Home = ({ type }) => {
 						method: "GET",
 						headers: {
 							"Content-Type": "application/json"
-						}
+						},
+						credentials: "include"
 					})
 				}
 				if (type === "subscribed") {
@@ -34,7 +35,8 @@ const Home = ({ type }) => {
 						method: "GET",
 						headers: {
 							"Content-Type": "application/json"
-						}
+						},
+						credentials: "include"
 					})
 				}
 				if (type === "search") {
@@ -42,7 +44,8 @@ const Home = ({ type }) => {
 						method: "GET",
 						headers: {
 							"Content-Type": "application/json"
-						}
+						},
+						credentials: "include"
 					})
 				}
 				const data = await res.json()

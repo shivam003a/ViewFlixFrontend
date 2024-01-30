@@ -98,7 +98,8 @@ const Upload = () => {
             },
             body: JSON.stringify({
                 title, description, imgUrl, videoUrl, tags
-            })
+            }),
+            credentials: "include"
         })
 
         const data = await res.json()

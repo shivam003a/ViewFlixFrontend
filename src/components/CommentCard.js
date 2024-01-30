@@ -8,7 +8,13 @@ const CommentCard = ({ comment }) => {
     useEffect(() => {
         try {
             const fetchCommentUser = async () => {
-                const res = await fetch(`${process.env.REACT_APP_BASE_URL}/api/user/find/${comment.userId}`)
+                const res = await fetch(`${process.env.REACT_APP_BASE_URL}/api/user/find/${comment.userId}`, {
+                    method: "GET",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    credentials: "include"
+                })
                 const data = await res.json()
                 setUser(data.data)
             }

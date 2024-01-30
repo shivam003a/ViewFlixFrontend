@@ -32,7 +32,8 @@ const Register = () => {
             },
             body: JSON.stringify({
                 name, username, email, password
-            })
+            }),
+            credentials: "include"
         })
 
         const data = await res.json()
