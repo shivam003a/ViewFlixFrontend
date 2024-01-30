@@ -1,0 +1,44 @@
+.navigation-container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 38px;
+    padding: 8px 8px;
+    position: sticky;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    background-color: white;
+}
+
+.logo-image {
+    width: 40px;
+    filter: contrast(1);
+}
+
+.navigation-container a {
+    text-decoration: none;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    font-size: 12px;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+}
+
+.logout-button{
+    text-decoration: none;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    font-size: 12px;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+}
+
+.logout-text{
+    font-size: 12px;
+}

@@ -1,0 +1,73 @@
+.register-container {
+  width: 55%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.register-card {
+  width: 50%;
+  height: 80%;
+  display: flex;
+  background-color: white;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0px 0px 5px 1px #d3caca;
+}
+
+.register-right {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.register-right p {
+  font-size: 22px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.register-right input {
+  width: 80%;
+  height: 30px;
+  outline: 0;
+  border: 0;
+  border-bottom: 1px solid black;
+}
+
+.symbol {
+  width: 80%;
+  position: relative;
+  cursor: pointer;
+}
+
+.symbol input {
+  width: 100%;
+}
+
+.symbol img {
+  width: 18px;
+  position: absolute;
+  top: 50%;
+  right: 3%;
+  transform: translateY(-50%);
+}
+
+
+@media only screen and (max-width: 576px){
+  .register-container {
+    width: 100%;
+  }
+  
+  .register-card {
+    width: 80%;
+    height: 70%;
+  }
+}

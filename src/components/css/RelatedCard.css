@@ -1,0 +1,48 @@
+.rcard{
+    background-color: white;
+    display: flex;
+    gap: 8px;
+}
+
+.rthumbnail{
+    flex: 1;
+    width: 100%;
+    overflow: hidden;
+}
+
+.rthumbnail img{
+    width: 100%;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+}
+
+.rthumbnail img:hover{
+    animation-name: image-animation;
+    animation-iteration-count: 1;
+    animation-duration: 600ms;
+    animation-fill-mode: forwards;
+}
+
+@keyframes image-animation {
+    100%{
+        transform: scale(1.1);
+    }
+}
+
+.rdesc-container{
+    flex: 1;
+    display: flex;
+    gap: 8px;
+    padding: 4px 0;
+}
+
+.rtitle{
+    font-size: 16px;
+    color: black;
+    font-weight: 500;
+}
+
+.rwatch-details{
+    font-size: 14px;
+    color: rgb(107, 102, 102);
+}

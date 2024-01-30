@@ -1,0 +1,40 @@
+.cc{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 12px;
+    background-color: rgb(239, 232, 232);
+    padding: 4px;
+}
+
+.cc-img img{
+    width: 30px;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+}
+
+.cc-content{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    align-items: flex-start;
+}
+
+.cc-info{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+
+.cc-info span{
+    font-size: 14px;
+    color: black;
+    font-weight: 500;
+}
+
+.cc-desc{
+    color: rgb(129, 125, 125);
+    font-size: 14px;
+}

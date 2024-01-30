@@ -1,0 +1,25 @@
+.no-video-auth-wrapper{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.no-video-auth{
+    display: flex;
+    margin: auto;
+    flex-direction: column;
+    gap: 12px;
+    justify-content: center;
+    align-items: center;
+}
+
+.no-video-auth span{
+    font-size: 36px;
+    text-align: center;
+    color: rgb(176, 168, 168);
+}
+
+.no-video-auth a{
+    text-decoration: none;
+}
