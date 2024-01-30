@@ -4,9 +4,10 @@ import { getStorage, ref, uploadBytesResumable, getDownloadURL } from 'firebase/
 import app from '../firebase/firebase'
 import toast from 'react-hot-toast'
 import {useSelector} from 'react-redux'
-import {NavLink} from 'react-router-dom'
+import {NavLink, useNavigate} from 'react-router-dom'
 
 const Upload = () => {
+    const navigate =  useNavigate()
 
     const [title, setTitle] = useState('')
     const [description, setDescription] = useState('')
@@ -105,6 +106,7 @@ const Upload = () => {
         const data = await res.json()
         if (res.status === 200) {
             toast.success(data.msg)
+            navigate('/')
         }
         else {
             toast.error(data.msg)
