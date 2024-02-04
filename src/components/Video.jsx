@@ -247,7 +247,7 @@ const Video = () => {
                                 </div>
                                 <span className='descript'>{videoInfo.description}</span>
                             </div>
-                            <div className='comment' key={videoInfo._id}>
+                            <div className='comment'>
                                 {
                                     logged ? (
                                         <form className='comment-form'>
@@ -264,7 +264,7 @@ const Video = () => {
                                 <div className='comment-container'>
                                     {
                                         commentList && commentList.map((comment) => {
-                                            return <CommentCard comment={comment} />
+                                            return <CommentCard comment={comment} key={comment._id}/>
                                         })
                                     }
                                 </div>
