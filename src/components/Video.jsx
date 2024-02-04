@@ -247,7 +247,7 @@ const Video = () => {
                                 </div>
                                 <span className='descript'>{videoInfo.description}</span>
                             </div>
-                            <div className='comment'>
+                            <div className='comment' key={videoInfo._id}>
                                 {
                                     logged ? (
                                         <form className='comment-form'>
