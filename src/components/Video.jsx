@@ -261,7 +261,7 @@ const Video = () => {
                                         </form>
                                     )
                                 }
-                                <div className='comment-container'>
+                                <div className='comment-container' key={video._id}>
                                     {
                                         commentList && commentList.map((comment) => {
                                             return <CommentCard comment={comment} key={comment._id}/>
