@@ -41,7 +41,7 @@ const Search = () => {
 					<FaVideo size={24} />
 				</NavLink>
 				{
-					userInfoNav.img ? (<NavLink to="/"><img src={userInfoNav.img} className='nav-img' /></NavLink>) : (
+					userInfoNav.img ? (<NavLink to="/"><img src={userInfoNav.img} className='nav-img' alt='user profile'/></NavLink>) : (
 						<NavLink to="#"><FaUserCircle size={24} /></NavLink>)
 				}
 			</form>

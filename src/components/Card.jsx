@@ -28,13 +28,13 @@ const Card = ({ video }) => {
 		<div className='card'>
 			<NavLink to={`/video/${video._id}`} style={{ "textDecoration": "none" }}>
 				<div className='thumbnail'>
-					<img src={video.imgUrl} loading='lazy'/>
+					<img src={video.imgUrl} alt={video.title}/>
 				</div>
 			</NavLink>
 			<div className='desc-container'>
 				<NavLink to={`/user/${creator._id}`}>
 					{
-						creator.img ? (<img src={creator.img} className='profile-img' />) : (<img src={placeholder} alt='content creater' className='profile-img' />)
+						creator.img ? (<img src={creator.img} className='profile-img' alt='profile image'/>) : (<img src={placeholder} alt='placeholder profile image' className='profile-img'/>)
 					}
 				</NavLink>
 				<div className='desc'>

@@ -190,7 +190,7 @@ const Video = () => {
                             <div className='video-utilities'>
                                 <div className='sub-container'>
                                     <div className='sub-subcontainer'>
-                                        <div className='sub-image'><img src={userInfo.img} /></div>
+                                        <div className='sub-image'><img src={userInfo.img} alt='creator profile'/></div>
                                         <div className='sub-detail'>
                                             <span className='username'>{userInfo.username}</span>
                                             <span className='sub-count'>{userInfo.subscribers} subscribers</span>
