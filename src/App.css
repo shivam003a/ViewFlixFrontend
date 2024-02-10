@@ -13,12 +13,13 @@
 }
 
 .navigation{
-    flex: 1;
+    width: 54px;
     height: 100vh;
+    background-color: blue;
 }
 
 .content{
-    flex: 21;
+    width: calc(100% - 54px);
     display: flex;
     flex-direction: column;
     position: relative;
@@ -32,4 +33,5 @@
 
 .home{
     height: 100%;
+    position: relative;
 }

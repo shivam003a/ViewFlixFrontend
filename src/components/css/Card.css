@@ -13,18 +13,6 @@
     object-fit: cover;
 }
 
-.thumbnail img:hover{
-    animation-name: image-animation;
-    animation-iteration-count: 1;
-    animation-duration: 600ms;
-    animation-fill-mode: forwards;
-}
-
-@keyframes image-animation {
-    100%{
-        transform: scale(1.1);
-    }
-}
 
 .desc-container{
     display: flex;

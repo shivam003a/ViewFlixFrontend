@@ -172,11 +172,10 @@ const Video = () => {
             dispatch(setCommentList(data))
         }
         fetchComment()
-    }, [commentUpdate])
+    }, [id, commentUpdate])
 
     return (
-
-        <div>
+        <div className='single-video-update'>
             {
                 loading ? (<Loading />) : (
                     <div className='single-video'>

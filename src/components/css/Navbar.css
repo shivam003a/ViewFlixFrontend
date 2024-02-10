@@ -4,11 +4,12 @@
     flex-direction: column;
     gap: 38px;
     padding: 8px 8px;
-    position: sticky;
+    position: fixed;
     left: 0;
     top: 0;
     bottom: 0;
     background-color: white;
+    z-index: 1000;
 }
 
 .logo-image {
