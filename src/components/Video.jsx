@@ -101,6 +101,11 @@ const Video = () => {
         navigate('/signin')
     }
 
+    const handleShare = async()=>{
+        // await navigator.share
+        
+    }
+
     useEffect(() => {
         const fetchData = async () => {
             dispatch(startLoading())
@@ -236,7 +241,7 @@ const Video = () => {
                                         }
                                         <span>{videoInfo.dislikes ? videoInfo.dislikes.length : 0}</span>
                                     </div>
-                                    <div className='like'><IoMdShareAlt size={24} /></div>
+                                    <div className='like' onClick={handleShare}><IoMdShareAlt size={24} /></div>
                                 </div>
                             </div>
                             <div className='vid-desc'>

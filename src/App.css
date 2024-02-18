@@ -7,6 +7,16 @@
     font-family: 'Raleway', sans-serif;
 }
 
+::-webkit-scrollbar{
+    width: 6px;
+}
+::-webkit-scrollbar-thumb{
+    background-color: rgb(69, 67, 67);
+}
+::-webkit-scrollbar-track{
+    background-color: rgb(215, 211, 211);
+}
+
 .wrapper{
     display: flex;
     background-color: white;
@@ -15,7 +25,6 @@
 .navigation{
     width: 54px;
     height: 100vh;
-    background-color: blue;
 }
 
 .content{
