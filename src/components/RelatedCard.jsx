@@ -9,7 +9,7 @@ const RelatedCard = ({ video }) => {
 		<NavLink to={`/video/${video._id}`} style={{ "textDecoration": "none" }}>
 			<div className='rcard'>
 				<div className='rthumbnail'>
-					<img src={video.imgUrl} alt={video.title}/>
+					<img src={video.imgUrl} alt={video.title} loading='lazy'/>
 				</div>
 				<div className='rdesc-container'>
 					<div className='desc'>

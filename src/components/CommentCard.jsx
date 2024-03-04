@@ -28,7 +28,7 @@ const CommentCard = ({ comment }) => {
         <div className='cc'>
             <div className='cc-img'>
                 {
-                    user.img ? (<img src={user.img} alt='profile image'/>) : (<img src={placeholder} alt='placeholder profile'/>)
+                    user.img ? (<img src={user.img} alt='profile image' loading='lazy'/>) : (<img src={placeholder} alt='placeholder profile' loading='lazy'/>)
                 }
             </div>
             <div className='cc-content'>

@@ -67,7 +67,7 @@ const Navbar = () => {
     return (
         <>
             <div className='navigation-container'>
-                <NavLink to='/'><img src={logo} alt='logo' className='logo-image' /></NavLink>
+                <NavLink to='/'><img src={logo} alt='logo' className='logo-image' loading='lazy'/></NavLink>
                 <NavLink to="/">
                     <IoMdHome size={22} />
                     <span>Home</span>

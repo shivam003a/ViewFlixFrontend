@@ -73,7 +73,7 @@ const Login = () => {
                         <input type={isText ? "text" : "password"} name="password" id='login-password' value={formData.password} placeholder="password" autoComplete="off"
                             onChange={handleFormData}
                         />
-                        <img src={isText ? hide : view} onClick={handleSeePass} alt='login-img' />
+                        <img src={isText ? hide : view} onClick={handleSeePass} alt='login-img' loading='lazy'/>
                     </div>
                     {
                         loading ? (<button className='submit' placeholder="Submit"
